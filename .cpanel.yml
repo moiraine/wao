@@ -2,5 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/theholy2/public_html/
+    - /bin/cp -R dist/* $DEPLOYPATH
     - export DEPLOYPATH=/home1/theholy2/public_html/wao/
     - /bin/cp -R dist/* $DEPLOYPATH
