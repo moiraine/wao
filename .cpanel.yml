@@ -1,5 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
-    - /bin/cp -R . $DEPLOYPATH
+    - export DEPLOYPATH=/home1/theholy2/public_html/wao/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -R src $DEPLOYPATH
+    - /bin/cp -R node_modules $DEPLOYPATH
