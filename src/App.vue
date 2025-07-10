@@ -9,7 +9,7 @@
         <RouterLink class="nav-link active" to="/">Home</RouterLink>
     </li>
     <li class="nav-item">
-        <RouterLink class="nav-link" to="/about">About</RouterLink>
+        <RouterLink class="nav-link" to="/castle">Castle</RouterLink>
     </li>
     <li class="nav-item">
         <RouterLink class="nav-link" to="/packs">Packs</RouterLink>
