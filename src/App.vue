@@ -4,14 +4,33 @@
 </script>
 
 <template>
-  <ul class="nav">
-    <li class="nav-item">
-        <RouterLink class="nav-link" to="/castle">Castle</RouterLink>
-    </li>
-    <li class="nav-item">
-        <RouterLink class="nav-link" to="/packs">Packs</RouterLink>
-    </li>
-  </ul>
+
+
+  <nav class="navbar navbar-expand-xs bg-body-tertiary">
+    <ul class="nav">
+      <li class="nav-item">
+          <RouterLink class="nav-link active" to="/castle">Castle</RouterLink>
+      </li>
+      <li class="nav-item">
+          <RouterLink class="nav-link" to="/packs">Packs</RouterLink>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Events
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <RouterLink class="dropdown-item" to="/events/ponies">Ponies</RouterLink>
+          </li>
+          <li>
+            <RouterLink class="dropdown-item" to="/events/marbles">Marbles</RouterLink>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
   <RouterView />
 </template>
 

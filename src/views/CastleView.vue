@@ -6,9 +6,7 @@
 
 <template>
 
-    <div>List of Castle Requirements</div>
-
-    
+    <div class="heading">List of Castle Requirements</div>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
@@ -137,6 +135,8 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    
+                                    Maximum Azurite Required: {{parseInt(item.azurite) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.azurite)), 0))}}
                                 </td>
                             </tr>
                         </template>
@@ -149,6 +149,10 @@
 </template>
 
 <style>
+    .heading {
+        padding: 1rem;
+        font-weight: bold;
+    }
     .table {
         min-width: 32rem;
     }
