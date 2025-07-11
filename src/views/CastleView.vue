@@ -81,6 +81,70 @@
           </div>
         </div>
       </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            C30+ requirement details
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+
+                <table class="table table-bordered table.sm table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Lvl</th>
+                            <th scope="col">F/W</th>
+                            <th scope="col">Stone</th>
+                            <th scope="col">Iron</th>
+                            <th scope="col">Azurite</th>
+                            <th scope="col">Req</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template v-for="item in castleUpgradesData30plus">
+                            <tr>
+                                <td>{{item.castle}}</td>
+                                <td>{{item.foodAndWood}}</td>
+                                <td>{{item.stone}}</td>
+                                <td>{{item.iron}}</td>
+                                <td>{{item.azurite}}</td>
+                                <td>{{item.requirement}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    {{item.requirement}} resources
+
+                                    <table class="table mb-0 table-bordered table.sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Lvl</th>
+                                                <th scope="col">Food</th>
+                                                <th scope="col">Wood</th>
+                                                <th scope="col">Stone</th>
+                                                <th scope="col">Iron</th>
+                                                <th scope="col">Azurite</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="expandedItem in item.expanded">
+                                                <td>{{expandedItem.level}}</td>
+                                                <td>{{expandedItem.food}}</td>
+                                                <td>{{expandedItem.wood}}</td>
+                                                <td>{{expandedItem.stone}}</td>
+                                                <td>{{expandedItem.iron}}</td>
+                                                <td>{{expandedItem.azurite}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 

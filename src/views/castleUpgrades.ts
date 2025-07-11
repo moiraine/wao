@@ -1,6 +1,6 @@
 export const castleUpgradesData1to30 = [
     {
-      "castle": "1->2",
+      "castle": "C1->2",
       "foodAndWood": "4k",
       "stone": null,
       "iron": null,
@@ -8,7 +8,7 @@ export const castleUpgradesData1to30 = [
       "requirement": null
     },
     {
-      "castle": "2->3",
+      "castle": "C2->3",
       "foodAndWood": "6k",
       "stone": null,
       "iron": null,
@@ -16,7 +16,7 @@ export const castleUpgradesData1to30 = [
       "requirement": null
     },
     {
-      "castle": "3->4",
+      "castle": "C3->4",
       "foodAndWood": "10k",
       "stone": null,
       "iron": null,
@@ -24,7 +24,7 @@ export const castleUpgradesData1to30 = [
       "requirement": null
     },
     {
-      "castle": "4->5",
+      "castle": "C4->5",
       "foodAndWood": "16k",
       "stone": null,
       "iron": null,
@@ -32,7 +32,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Farm"
     },
     {
-      "castle": "5->6",
+      "castle": "C5->6",
       "foodAndWood": "44k",
       "stone": null,
       "iron": null,
@@ -40,7 +40,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Sawmill"
     },
     {
-      "castle": "6->7",
+      "castle": "C6->7",
       "foodAndWood": "60k",
       "stone": null,
       "iron": null,
@@ -48,7 +48,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Barracks"
     },
     {
-      "castle": "7->8",
+      "castle": "C7->8",
       "foodAndWood": "100k",
       "stone": null,
       "iron": null,
@@ -56,7 +56,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Depot"
     },
     {
-      "castle": "8->9",
+      "castle": "C8->9",
       "foodAndWood": "150k",
       "stone": null,
       "iron": null,
@@ -64,7 +64,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Training Ground"
     },
     {
-      "castle": "9->10",
+      "castle": "C9->10",
       "foodAndWood": "250k",
       "stone": null,
       "iron": null,
@@ -72,7 +72,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Medic Tent"
     },
     {
-      "castle": "10->11",
+      "castle": "C10->11",
       "foodAndWood": "450k",
       "stone": "20k",
       "iron": null,
@@ -80,7 +80,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "College"
     },
     {
-      "castle": "11->12",
+      "castle": "C11->12",
       "foodAndWood": "860k",
       "stone": "56",
       "iron": null,
@@ -88,7 +88,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Hospital"
     },
     {
-      "castle": "12->13",
+      "castle": "C12->13",
       "foodAndWood": "1.65M",
       "stone": "144k",
       "iron": null,
@@ -96,7 +96,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Stone Mine"
     },
     {
-      "castle": "13->14",
+      "castle": "C13->14",
       "foodAndWood": "2.66M",
       "stone": "280k",
       "iron": "",
@@ -104,7 +104,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Embassy"
     },
     {
-      "castle": "14->15",
+      "castle": "C14->15",
       "foodAndWood": "4.67M",
       "stone": "656k",
       "iron": "",
@@ -112,7 +112,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Drill Ground"
     },
     {
-      "castle": "15->16",
+      "castle": "C15->16",
       "foodAndWood": "5.25M",
       "stone": "852k",
       "iron": "164k",
@@ -120,7 +120,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Watchtower"
     },
     {
-      "castle": "16->17",
+      "castle": "C16->17",
       "foodAndWood": "6.39M",
       "stone": "1.2M",
       "iron": "256k",
@@ -128,7 +128,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Sawmill"
     },
     {
-      "castle": "17->18",
+      "castle": "C17->18",
       "foodAndWood": "8.31M",
       "stone": "1.56M",
       "iron": "333k",
@@ -136,7 +136,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Iron Mine"
     },
     {
-      "castle": "18->19",
+      "castle": "C18->19",
       "foodAndWood": "10.44M",
       "stone": "2.02M",
       "iron": "504k",
@@ -144,7 +144,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Blacksmith"
     },
     {
-      "castle": "19->20",
+      "castle": "C19->20",
       "foodAndWood": "12.22M",
       "stone": "2.36M",
       "iron": "590k",
@@ -152,7 +152,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Training Ground"
     },
     {
-      "castle": "20->21",
+      "castle": "C20->21",
       "foodAndWood": "14.48M",
       "stone": "2.9M",
       "iron": "828k",
@@ -160,7 +160,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Medic Tent"
     },
     {
-      "castle": "21->22",
+      "castle": "C21->22",
       "foodAndWood": "19M",
       "stone": "3.7M",
       "iron": "1.1M",
@@ -168,7 +168,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Drill Ground"
     },
     {
-      "castle": "22->23",
+      "castle": "C22->23",
       "foodAndWood": "24.96M",
       "stone": "5M",
       "iron": "1.5M",
@@ -176,7 +176,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Barracks"
     },
     {
-      "castle": "23->24",
+      "castle": "C23->24",
       "foodAndWood": "32M",
       "stone": "6.4M",
       "iron": "2.3M",
@@ -184,7 +184,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Embassy"
     },
     {
-      "castle": "24->25",
+      "castle": "C24->25",
       "foodAndWood": "42.26M",
       "stone": "8.46M",
       "iron": "2.98M",
@@ -192,7 +192,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Depot"
     },
     {
-      "castle": "25->26",
+      "castle": "C25->26",
       "foodAndWood": "55.98M",
       "stone": "11.2M",
       "iron": "3.94M",
@@ -200,7 +200,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Watchtower"
     },
     {
-      "castle": "26->27",
+      "castle": "C26->27",
       "foodAndWood": "71.37M",
       "stone": "14.28M",
       "iron": "6.04M",
@@ -208,7 +208,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Hospital"
     },
     {
-      "castle": "27->28",
+      "castle": "C27->28",
       "foodAndWood": "93M",
       "stone": "19M",
       "iron": "8M",
@@ -216,7 +216,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "College"
     },
     {
-      "castle": "28->29",
+      "castle": "C28->29",
       "foodAndWood": "120.62M",
       "stone": "24.13M",
       "iron": "10.21M",
@@ -224,7 +224,7 @@ export const castleUpgradesData1to30 = [
       "requirement": "Drill Ground"
     },
     {
-      "castle": "29->30",
+      "castle": "C29->30",
       "foodAndWood": "156.8M",
       "stone": "31.36M",
       "iron": "13.27M",
@@ -235,87 +235,237 @@ export const castleUpgradesData1to30 = [
 
   export const castleUpgradesData30plus = [
     {
-        "castle": "30->31",
+        "castle": "C30->31",
         "foodAndWood": "182.36M",
         "stone": "39.51M",
         "iron": "19.76M",
         "azurite": "4810",
-        "requirement": "Blacksmith"
+        "requirement": "Blacksmith",
+        "expanded": [],
       },
       {
-        "castle": "31->32",
+        "castle": "C31->32",
         "foodAndWood": "216.72M",
         "stone": "50.88M",
         "iron": "25.44M",
         "azurite": "8620",
-        "requirement": "Drill Ground"
+        "requirement": "Drill Ground",
+        "expanded": [{
+            "level": "30->31",
+            "food": "0",
+            "wood": "47M",
+            "stone": "3M",
+            "iron": "1M",
+            "azurite": "1440",
+        }],
       },
       {
-        "castle": "32->33",
+        "castle": "C32->33",
         "foodAndWood": "247.15M",
         "stone": "64.37M",
         "iron": "33.36M",
         "azurite": "16760",
-        "requirement": "Depot"
+        "requirement": "Depot",
+        "expanded": [{
+            "level": "30->31",
+            "food": "14M",
+            "wood": "14M",
+            "stone": "1M",
+            "iron": "710k",
+            "azurite": "1290",
+        },{
+            "level": "31->32",
+            "food": "18M",
+            "wood": "18M",
+            "stone": "2M",
+            "iron": "1M",
+            "azurite": "1290", 
+        }],
       },
       {
-        "castle": "33->34",
+        "castle": "C33->34",
         "foodAndWood": "275.89M",
         "stone": "80M",
         "iron": "42.76M",
         "azurite": "29100",
-        "requirement": "Embassy"
+        "requirement": "Embassy",
+        "expanded": [{
+            "level": "30->31",
+            "food": "0",
+            "wood": "13M",
+            "stone": "4M",
+            "iron": "1M",
+            "azurite": "720",
+        },{
+            "level": "31->32",
+            "food": "0",
+            "wood": "16M",
+            "stone": "5M",
+            "iron": "2M",
+            "azurite": "1290"
+        },{
+            "level": "32->33",
+            "food": "0",
+            "wood": "19M",
+            "stone": "6M",
+            "iron": "3M",
+            "azurite": "2630"
+        }],
       },
       {
-        "castle": "34->35",
+        "castle": "C34->35",
         "foodAndWood": "309.27M",
         "stone": "94.41M",
         "iron": "53.71M",
         "azurite": "41770",
-        "requirement": "Hospital"
+        "requirement": "Hospital",
+        "expanded": [{
+            "level": "30->31", "food": "40M", "wood": "16M", "stone": "4M", "iron": "2M", "azurite": "1210",
+        },{
+            "level": "31->32", "food": "43M", "wood": "19M", "stone": "5M", "iron": "3M", "azurite": "2160"
+        },{
+            "level": "32->33", "food": "53M", "wood": "23M", "stone": "7M", "iron": "4M", "azurite": "4380"
+        },{
+            "level": "33->34", "food": "64M", "wood": "26M", "stone": "9M", "iron": "5M", "azurite": "7270"
+        }],
       },
       {
-        "castle": "35->36",
+        "castle": "C35->36",
         "foodAndWood": "328M",
         "stone": "102M",
         "iron": "58M",
         "azurite": "42000",
-        "requirement": "Drill Ground"
+        "requirement": "Drill Ground",
+        "expanded": [{
+            "level": "31->32", "food": "0", "wood": "56M", "stone": "5M", "iron": "2M", "azurite": "2590",
+        },{
+            "level": "32->33", "food": "0", "wood": "66M", "stone": "6M", "iron": "3M", "azurite": "6890"
+        },{
+            "level": "33->34", "food": "0", "wood": "75M", "stone": "8M", "iron": "4M", "azurite": "11200"
+        },{
+            "level": "34->35", "food": "0", "wood": "86M", "stone": "10M", "iron": "6M", "azurite": "16820"
+        }],
       },
       {
-        "castle": "36->37",
+        "castle": "C36->37",
         "foodAndWood": "347M",
         "stone": "109M",
         "iron": "63M",
         "azurite": "44750",
-        "requirement": "Depot"
+        "requirement": "Depot",
+        "expanded": [{
+            "level": "32->33",
+            "food": "23M",
+            "wood": "23M",
+            "stone": "3M",
+            "iron": "1M",
+            "azurite": "2630",
+        },{
+            "level": "33->34",
+            "food": "29M",
+            "wood": "29M",
+            "stone": "4M",
+            "iron": "2M",
+            "azurite": "4370",
+        },{
+            "level": "34->35",
+            "food": "35M",
+            "wood": "35M",
+            "stone": "6M",
+            "iron": "3M",
+            "azurite": "6270",
+        },{
+            "level": "35->36",
+            "food": "37M",
+            "wood": "37M",
+            "stone": "6M",
+            "iron": "3M",
+            "azurite": "6460",
+        }],
       },
       {
-        "castle": "37->38",
+        "castle": "C37->38",
         "foodAndWood": "367M",
         "stone": "117M",
         "iron": "68M",
         "azurite": "48770",
-        "requirement": "Embassy"
+        "requirement": "Embassy",
+        "expanded": [{
+            "level": "33->34",
+            "food": "0",
+            "wood": "22M",
+            "stone": "8M",
+            "iron": "3M",
+            "azurite": "4370",
+        },{
+            "level": "34->35",
+            "food": "0",
+            "wood": "26M",
+            "stone": "10M",
+            "iron": "4M",
+            "azurite": "6270"
+        },{
+            "level": "35->36",
+            "food": "0",
+            "wood": "28M",
+            "stone": "11M",
+            "iron": "5M",
+            "azurite": "6460"
+        },{
+            "level": "36->37",
+            "food": "0",
+            "wood": "30M",
+            "stone": "12M",
+            "iron": "5M",
+            "azurite": "7020"
+        }],
       },
       {
-        "castle": "38->39",
+        "castle": "C38->39",
         "foodAndWood": "389M",
         "stone": "126M",
         "iron": "74M",
         "azurite": "52220",
-        "requirement": "College"
+        "requirement": "College",
+        "expanded": [{
+            "level": "30->31", "food": "0", "wood": "17M", "stone": "5M", "iron": "2M", "azurite": "1090",
+        },{
+            "level": "31->32", "food": "0", "wood": "21M", "stone": "7M", "iron": "3M", "azurite": "1940",
+        },{
+            "level": "32->33", "food": "0", "wood": "27M", "stone": "9M", "iron": "4M", "azurite": "3940"
+        },{
+            "level": "33->34", "food": "0", "wood": "33M", "stone": "11M", "iron": "5M", "azurite": "6540"
+        },{
+            "level": "34->35", "food": "0", "wood": "41M", "stone": "13M", "iron": "6M", "azurite": "9410"
+        },{
+            "level": "35->36", "food": "0", "wood": "46M", "stone": "14M", "iron": "6M", "azurite": "9740",
+        },{
+            "level": "36->37", "food": "0", "wood": "49M", "stone": "16M", "iron": "7M", "azurite": "10670"
+        },{
+            "level": "37->38", "food": "0", "wood": "53M", "stone": "17M", "iron": "7M", "azurite": "11900"
+        }],
       },
       {
-        "castle": "39->40",
+        "castle": "C39->40",
         "foodAndWood": "411M",
         "stone": "134M",
         "iron": "80M",
         "azurite": "54610",
-        "requirement": "Hospital"
+        "requirement": "Hospital",
+        "expanded": [{
+            "level": "34->35", "food": "77M", "wood": "30M", "stone": "12M", "iron": "7M", "azurite": "10450",
+        },{
+            "level": "35->36", "food": "83M", "wood": "34M", "stone": "14M", "iron": "8M", "azurite": "10820"
+        },{
+            "level": "36->37", "food": "88M", "wood": "38M", "stone": "16M", "iron": "9M", "azurite": "11850"
+        },{
+            "level": "37->38", "food": "94M", "wood": "42M", "stone": "18M", "iron": "11M", "azurite": "13220"
+        },{
+            "level": "38->39", "food": "101M", "wood": "46M", "stone": "20M", "iron": "12M", "azurite": "14430"
+        }],
       },
       {
-        "castle": "40->S1",
+        "castle": "C40->S1",
         "foodAndWood": "277M",
         "stone": "80M",
         "iron": "43M",
