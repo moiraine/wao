@@ -6,15 +6,18 @@
 
 <template>
 
+    <div>List of Castle Requirements</div>
+
+    
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
             C1 to C30
           </button>
         </h2>
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
           <div class="accordion-body">
 
             <div class="table-responsive">
