@@ -1,1 +1,0 @@
-import{_ as o,c as s,a as t,o as n}from"./index-BDZNlK8D.js";const r={},a={class:"about"};function c(_,e){return n(),s("div",a,e[0]||(e[0]=[t("h1",null,"Under Construction",-1)]))}const d=o(r,[["render",c]]);export{d as default};
