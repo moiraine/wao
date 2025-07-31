@@ -254,6 +254,8 @@ export const castleUpgradesData1to30 = [
             "level": "30->31", "food": "0", "wood": "47M", "stone": "3M", "iron": "1M", "azurite": "1440",
         },{
             "level": "Wall", "food": "0", "wood": "118M", "stone": "19M", "iron": "10M", "azurite": "1810",
+        },{
+            "level": "Temple6", "food": "100M", "wood": "22M", "stone": "10M", "iron": "7M", "azurite": "3000",
         },],
       },
       {
@@ -286,6 +288,14 @@ export const castleUpgradesData1to30 = [
             "level": "32->33", "food": "0", "wood": "19M", "stone": "6M", "iron": "3M", "azurite": "2630"
         },{
             "level": "Wall", "food": "0", "wood": "171M", "stone": "33M", "iron": "17M", "azurite": "6890",
+        },{
+            "level": "B30->31", "food": "62M", "wood": "27M", "stone": "7M", "iron": "4M", "azurite": "1210",
+        },{
+            "level": "B31->32", "food": "77M", "wood": "32M", "stone": "10M", "iron": "6M", "azurite": "2160",
+        },{
+            "level": "B32->33", "food": "94M", "wood": "38M", "stone": "13M", "iron": "7M", "azurite": "4580",
+        },{
+            "level": "B33->34", "food": "113M", "wood": "43M", "stone": "17M", "iron": "9M", "azurite": "7460",
         },],
       },
       {
@@ -305,6 +315,8 @@ export const castleUpgradesData1to30 = [
             "level": "33->34", "food": "64M", "wood": "26M", "stone": "9M", "iron": "5M", "azurite": "7270"
         },{
             "level": "Wall", "food": "0", "wood": "199M", "stone": "42M", "iron": "21M", "azurite": "11200",
+        },{
+            "level": "Temple7", "food": "193M", "wood": "51M", "stone": "19M", "iron": "13M", "azurite": "12000",
         },],
       },
       {
@@ -343,6 +355,12 @@ export const castleUpgradesData1to30 = [
             "level": "35->36", "food": "37M", "wood": "37M", "stone": "6M", "iron": "3M", "azurite": "6460",
         },{
             "level": "Wall", "food": "0", "wood": "243M", "stone": "58M", "iron": "29M", "azurite": "17060",
+        },{
+            "level": "B34->35", "food": "136M", "wood": "49M", "stone": "21M", "iron": "12M", "azurite": "11210",
+        },{
+            "level": "B35->36", "food": "144M", "wood": "54M", "stone": "24M", "iron": "13M", "azurite": "11890",
+        },{
+            "level": "B36->37", "food": "152M", "wood": "59M", "stone": "26M", "iron": "15M", "azurite": "13190",
         },],
       },
       {
@@ -362,6 +380,8 @@ export const castleUpgradesData1to30 = [
             "level": "36->37", "food": "0", "wood": "30M", "stone": "12M", "iron": "5M", "azurite": "7020"
         },{
             "level": "Wall", "food": "0", "wood": "256M", "stone": "62M", "iron": "32M", "azurite": "18320",
+        },{
+            "level": "Temple8", "food": "217M", "wood": "60M", "stone": "22M", "iron": "15M", "azurite": "30000",
         },],
       },
       {
@@ -410,6 +430,12 @@ export const castleUpgradesData1to30 = [
             "level": "38->39", "food": "101M", "wood": "46M", "stone": "20M", "iron": "12M", "azurite": "14430"
         },{
             "level": "Wall", "food": "0", "wood": "282M", "stone": "70M", "iron": "37M", "azurite": "21620",
+        },{
+            "level": "B37->38", "food": "161M", "wood": "63M", "stone": "29M", "iron": "17M", "azurite": "14860",
+        },{
+            "level": "B38->39", "food": "170M", "wood": "68M", "stone": "31M", "iron": "18M", "azurite": "16350",
+        },{
+            "level": "B39->40", "food": "179M", "wood": "74M", "stone": "34M", "iron": "20M", "azurite": "17500",
         },],
       },
       {

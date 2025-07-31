@@ -82,7 +82,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-            C30+ requirement details
+            C30+ and Tier requirement details 
           </button>
         </h2>
         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
@@ -137,6 +137,15 @@
                                     </table>
                                     
                                     Maximum Azurite Required: {{parseInt(item.azurite) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.azurite)), 0))}}
+                                    <br>
+                                    Total Food: {{parseInt(item.foodAndWood) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.food)), 0))}}M
+                                    <br>
+                                    Total Wood: {{parseInt(item.foodAndWood) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.wood)), 0))}}M
+                                    <br>
+                                    Total Stone: {{parseInt(item.stone) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.stone)), 0))}}M
+                                    <br>
+                                    Total Iron: {{parseInt(item.iron) + (item.expanded.reduce((acc, curr) => (acc + parseInt(curr.iron)), 0))}}M
+                                    <br>
                                 </td>
                             </tr>
                         </template>
