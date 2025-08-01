@@ -40,6 +40,33 @@ export enum Events {
     CANDY
 }
 
+export const listOfPackNames = {
+    ATHENA: 'Athena\'s Aegis',
+    LAEVATEINN: 'Laevateinn',
+    BRIONAC: 'Brionac',
+    APOLLOS_BOW: 'Apollo\'s Bow',
+    POSEIDON: 'Poseidon\'s Trident',
+}
+
+export const packsDataObject = {
+    [listOfPackNames.ATHENA]: {
+        "deals": [
+            {
+                category: Category.DAILY,
+                days: [Days.TUESDAY],
+                levels: [
+                    { level: 1, price: 2.99, pieces: 2 },
+                    { level: 2, price: 4.99, pieces: 3 },
+                    { level: 3, price: 6.99, pieces: 4 },
+                    { level: 4, price: 14.99, pieces: 8 },
+                    { level: 5, price: 29.99, pieces: 15 },
+                    { level: 6, price: 59.99, pieces: 27 },
+                ],
+            }
+        ]
+    } 
+}
+
 export const packsData = [
     {
         "name": "athena",
