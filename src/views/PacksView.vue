@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { Modal } from 'bootstrap'
   import { onMounted, ref } from 'vue'
-  import { packsData } from './packs.ts'
+  import { packsData, listOfPackNames, packsDataObject } from './packs.ts'
 
   const selectedArtifacts = ref([])
 
@@ -13,14 +13,8 @@
 
 
 <template>
-  <div class="about">
-    <h1>This is the packs page</h1>
-    <div>
-        Here's some packs data:
-        <div>
-            {{packsData}}
-        </div>
-    </div>
+  <div class="packs">
+    <h1>This is the packs page.  Under Construction.</h1>
 
     <button data-bs-toggle="modal" data-bs-target="#exampleModal">Click Me</button>
 
@@ -34,7 +28,7 @@
               <div class="checkbox-section-title">Artifact</div>
 
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="athena" id="athena-checkbox" v-model="selectedArtifacts">
+                <input class="form-check-input" type="checkbox" :value="listOfPackNames.ATHENA" id="athena-checkbox" v-model="selectedArtifacts">
                 <label class="form-check-label" for="athena-checkbox">
                   Athena's Aegis
                 </label>
@@ -148,39 +142,15 @@
     <p>Selected artifacts: {{ selectedArtifacts }}</p>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
+      <div class="accordion-item" v-for="item in selectedArtifacts" :key="listOfPackNames[item]">
         <h2 class="accordion-header">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-            Accordion Item #1
+            {{item}}
           </button>
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
           <div class="accordion-body">
-            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-            Accordion Item #2
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-            Accordion Item #3
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            {{packsDataObject[item]}}
           </div>
         </div>
       </div>
@@ -192,7 +162,7 @@
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .packs {
     min-height: 100vh;
     align-items: center;
   }
