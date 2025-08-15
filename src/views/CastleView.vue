@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { onMounted, ref } from 'vue'
-  import { castleUpgradesData1to30, castleUpgradesData30plus } from './castleUpgrades.ts'
+  import { castleUpgradesData1to30, castleUpgradesData30plus } from './castleUpgrades'
 
 </script>
 

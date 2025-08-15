@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import { Modal } from 'bootstrap'
   import { onMounted, ref } from 'vue'
-  import { packsData, listOfPackNames, packsDataObject } from './packs.ts'
+  import type { Ref } from 'vue'
+  import { packsData, listOfPackNames, packsDataObject } from './packs'
 
-  const selectedArtifacts = ref([])
-
+  const selectedArtifacts: Ref<{category: string; itemName: string;}[]> = ref([])
 
   const isMountedComponent = ref(false);
 
@@ -25,6 +25,17 @@
           <div class="modal-content">
             <div class="modal-body">
 
+              <div v-for="(categoryItems, category) in packsDataObject">
+                <div class="checkbox-section-title">{{ category }}</div>
+
+
+                <div class="form-check" v-for="(item, itemName) in categoryItems">
+                  <input class="form-check-input" type="checkbox" :value="{category: category, itemName: itemName}" id="athena-checkbox" v-model="selectedArtifacts">
+                  <label class="form-check-label" for="athena-checkbox">
+                    {{ itemName }}
+                  </label>
+                </div>
+              </div>
               <div class="checkbox-section-title">Artifact</div>
 
               <div class="form-check">
@@ -142,15 +153,15 @@
     <p>Selected artifacts: {{ selectedArtifacts }}</p>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item" v-for="item in selectedArtifacts" :key="listOfPackNames[item]">
+      <div class="accordion-item" v-for="item in selectedArtifacts">
         <h2 class="accordion-header">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-            {{item}}
+            {{item.itemName}}
           </button>
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
           <div class="accordion-body">
-            {{packsDataObject[item]}}
+            {{packsDataObject[item.category][item.itemName]}}
           </div>
         </div>
       </div>

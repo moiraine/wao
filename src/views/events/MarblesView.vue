@@ -13,7 +13,7 @@
         <br>
         <br>
         If you are a spender, the cheapest way to take 3 fragments is to buy the superior rewards right away on day 1,
-        because you will receive double the marbles from the daily quests.
+        because you will receive double the marbles from the daily quests.  You do not need to buy any marbles to take 3 fragments.
         <br>
         <br>
         The points received is luck-based, but on average, 5000 points is about $6 of marbles. 
