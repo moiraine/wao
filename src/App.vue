@@ -27,6 +27,19 @@
           </li>
         </ul>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Data
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <RouterLink class="dropdown-item" to="/data/titan">Titan</RouterLink>
+          </li>
+          <li>
+            <RouterLink class="dropdown-item" to="/data/jewels">Jewels</RouterLink>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
 

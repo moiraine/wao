@@ -48,23 +48,84 @@ export const listOfPackNames = {
     POSEIDON: 'Poseidon\'s Trident',
 }
 
+export const listOfPackCategories = {
+    ARTIFACTS: 'Artifacts',
+}
+
 export const packsDataObject = {
-    [listOfPackNames.ATHENA]: {
-        "deals": [
-            {
-                category: Category.DAILY,
-                days: [Days.TUESDAY],
-                levels: [
-                    { level: 1, price: 2.99, pieces: 2 },
-                    { level: 2, price: 4.99, pieces: 3 },
-                    { level: 3, price: 6.99, pieces: 4 },
-                    { level: 4, price: 14.99, pieces: 8 },
-                    { level: 5, price: 29.99, pieces: 15 },
-                    { level: 6, price: 59.99, pieces: 27 },
-                ],
-            }
-        ]
-    } 
+    [listOfPackCategories.ARTIFACTS]: {
+        [listOfPackNames.ATHENA]: {
+            "deals": [
+                {
+                    category: Category.DAILY,
+                    days: [Days.TUESDAY],
+                    levels: [
+                        { level: 1, price: 2.99, pieces: 2 },
+                        { level: 2, price: 4.99, pieces: 3 },
+                        { level: 3, price: 6.99, pieces: 4 },
+                        { level: 4, price: 14.99, pieces: 8 },
+                        { level: 5, price: 29.99, pieces: 15 },
+                        { level: 6, price: 59.99, pieces: 27 },
+                    ],
+                }
+            ]
+        },
+        [listOfPackNames.LAEVATEINN]: {
+            "name": "laevateinn",
+            "deals": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 1 },
+                        { level: 2, price: 9.99, pieces: 2 },
+                        { level: 3, price: 19.99, pieces: 4 },
+                        { level: 4, price: 29.99, pieces: 5 },
+                        { level: 5, price: 49.99, pieces: 7 },
+                        { level: 6, price: 99.99, pieces: 9 },
+                    ],
+                },
+                {
+                    category: Category.WEEKLY,
+                    levels: [
+                        { level: 1, price: 1.99, pieces: 1 },
+                        { level: 2, price: 4.99, pieces: 2 },
+                        { level: 3, price: 9.99, pieces: 4 },
+                        { level: 4, price: 14.99, pieces: 6 },
+                        { level: 5, price: 19.99, pieces: 7 },
+                        { level: 6, price: 49.99, pieces: 14 },
+                    ],
+                },
+                {
+                    category: Category.DAILY,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 1 },
+                        { level: 2, price: 9.99, pieces: 2 },
+                        { level: 3, price: 19.99, pieces: 4 },
+                        { level: 4, price: 29.99, pieces: 5 },
+                        { level: 5, price: 49.99, pieces: 7 },
+                        { level: 6, price: 99.99, pieces: 9 },
+                    ],
+                },
+                {
+                    category: Category.LUCKY,
+                    estFrequency: "Monthly",
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 1 },
+                        { level: 2, price: 9.99, pieces: 2 },
+                        { level: 3, price: 19.99, pieces: 4 },
+                        { level: 4, price: 29.99, pieces: 5 },
+                        { level: 5, price: 49.99, pieces: 7 },
+                        { level: 6, price: 99.99, pieces: 9 },
+                    ],
+                },
+                {
+                    category: Category.EVENTS,
+                    events: [Events.MICHAEL_ARCHANGEL, Events.MARBLES],
+                }
+    
+            ],
+        }
+    }
 }
 
 export const packsData = [
@@ -123,6 +184,7 @@ export const packsData = [
             },
             {
                 category: Category.LUCKY,
+                estFrequency: "Monthly",
                 levels: [
                     { level: 1, price: 4.99, pieces: 1 },
                     { level: 2, price: 9.99, pieces: 2 },
