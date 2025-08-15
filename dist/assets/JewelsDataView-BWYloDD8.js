@@ -1,0 +1,1 @@
+import{_ as t,c as o,a as s,o as n}from"./index-KYUJ0ow5.js";const a={},r={class:"about"};function c(_,e){return n(),o("div",r,e[0]||(e[0]=[s("h1",null,"Under Construction",-1)]))}const d=t(a,[["render",c]]);export{d as default};
