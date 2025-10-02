@@ -1,13 +1,53 @@
 <script setup lang="ts">
   import { Modal } from 'bootstrap'
-  import { onMounted, ref } from 'vue'
+  import { onMounted, ref, watch } from 'vue'
   import type { Ref } from 'vue'
-  import { packsData, listOfPackNames, packsDataObject } from './packs'
+  import { packsData, listOfPackNames, packsDataObject, Category, Days } from './packs'
 
-  const selectedArtifacts: Ref<{category: string; itemName: string;}[]> = ref([])
+  const selectedArtifacts: Ref<{category: string; itemName: string;}[]> = ref([]);
+  const selectedDealLevels: Ref<{
+    level: number; 
+    price: number; 
+    pieces: number;
+    itemName: string;
+    category: Category;
+    days: Days[];
+  }[]> = ref([]);
+  let selectedDealResults = {};
 
-  const isMountedComponent = ref(false);
+  watch(selectedDealLevels, (newValue) => {
+    selectedDealResults = {};
+    newValue.forEach((dealLevel) => {
+      console.log(dealLevel);
+      if (!selectedDealResults[dealLevel.itemName]) {
+        selectedDealResults[dealLevel.itemName] = {
+          pricePerMonth: 0,
+          piecesPerMonth: 0,
+        };
+      }
+      let timesPerMonth = 0;
+      switch(dealLevel.category) {
+        case Category.DAILY:
+          timesPerMonth = 4 * dealLevel.days.length;
+          break;
+        case Category.WEEKLY:
+          timesPerMonth = 4;
+          break;
+        case Category.MONTHLY:
+          timesPerMonth = 1;
+          break;
+        case Category.TWICEAWEEK:
+          timesPerMonth = 8;
+          break;
+        case Category.LUCKY:
+          timesPerMonth = 1;
+          break;
+      }
 
+      selectedDealResults[dealLevel.itemName].pricePerMonth += dealLevel.price * timesPerMonth;
+      selectedDealResults[dealLevel.itemName].piecesPerMonth += dealLevel.pieces * timesPerMonth;
+    });
+  });
 
 </script>
 
@@ -30,8 +70,8 @@
 
 
                 <div class="form-check" v-for="(item, itemName) in categoryItems">
-                  <input class="form-check-input" type="checkbox" :value="{category: category, itemName: itemName}" id="athena-checkbox" v-model="selectedArtifacts">
-                  <label class="form-check-label" for="athena-checkbox">
+                  <input class="form-check-input" type="checkbox" :value="{category: category, itemName: itemName}" :id="itemName + '-checkbox'" v-model="selectedArtifacts">
+                  <label class="form-check-label" :for="itemName + '-checkbox'">
                     {{ itemName }}
                   </label>
                 </div>
@@ -148,9 +188,34 @@
       </div>
     </div>
 
-
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-deals-definitions" aria-expanded="true" aria-controls="panelsStayOpen-deals-definitions">
+            Types of deals
+          </button>
+        </h2>
+        <div id="panelsStayOpen-deals-definitions" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <p>Basic Deal: The normal shop which rotates every 3-4 days (available twice per week)</p>
+            <p>Daily Deal: Appears every week on specific days</p>
+            <p>Weekly Deal: Available once per week</p>
+            <p>Monthly Deal: Available once per month</p>
+            <p>Lucky Deal: Available under the "limited" category</p>
+            <p>Lucky Estimated Frequency: approximately how often the deal will come</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <p>Selected artifacts: {{ selectedArtifacts }}</p>
+
+    <div>
+      Selected Deals: {{selectedDealResults}}
+      <div v-for="(selectedDealResult, itemName) in selectedDealResults">
+        {{itemName}}: {{selectedDealResult.pricePerMonth}} {{selectedDealResult.piecesPerMonth}}
+      </div>
+    </div>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item" v-for="item in selectedArtifacts">
@@ -161,7 +226,55 @@
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
           <div class="accordion-body">
-            {{packsDataObject[item.category][item.itemName]}}
+            <template v-for="deal in packsDataObject[item.category][item.itemName].deals">
+              <div v-if="deal.category === Category.EVENTS">
+                Also available in Events: {{deal.events}}
+              </div>
+            </template>
+
+            <table class="table table-bordered table.sm">
+              <thead>
+                  <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Lvl</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Qty</th>
+                      <th scope="col">$/Qty</th>
+                      <th scope="col">Deal</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                <template v-for="deal in packsDataObject[item.category][item.itemName].deals">
+                  <tr v-for="level in deal.levels">
+                    <td>
+                      <input 
+                        class="form-check-input" 
+                        type="checkbox" 
+                        :value="{
+                          ...level,
+                          itemName: item.itemName,
+                          category: deal.category,
+                          days: deal.days,
+                        }" 
+                        v-model="selectedDealLevels">
+                    </td>
+                    <td>{{level.level}}</td>
+                    <td>${{level.price}}</td>
+                    <td>{{level.pieces}}</td>
+                    <td :set="pricePerPiece = parseFloat((level.price/level.pieces).toPrecision(2))">
+                      <template v-if="pricePerPiece > 0.009">${{pricePerPiece.toFixed(2)}}</template>
+                      <template v-else>${{pricePerPiece}}</template>
+                      
+                    </td>
+                    <td>
+                      <template v-if="deal.category === Category.DAILY">{{deal.days.join(", ")}}</template>
+                      <template v-else>{{deal.category}}</template>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
