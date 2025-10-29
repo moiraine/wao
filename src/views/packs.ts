@@ -89,9 +89,32 @@ export const listOfPackNames = {
 
 export const listOfPackCategories = {
     ARTIFACTS: 'Artifacts',
+    RESOURCES: 'Resources',
 }
 
-export const packsDataObject = {
+export interface PacksDataObject {
+    [key: string]: {
+        [key: string]: {
+            deals: Deals[];
+        }
+    }
+}
+
+export interface DealLevels {
+    level: number;
+    price: number;
+    pieces: number;
+}
+
+export interface Deals {
+    category: Category;
+    levels?: DealLevels[];
+    days?: Days[];
+    events?: Events[];
+    estFrequency?: string;
+}
+
+export const packsDataObject: PacksDataObject = {
     [listOfPackCategories.ARTIFACTS]: {
         [listOfPackNames.ARTIFACTS_ATHENA]: {
             "deals": [
@@ -110,7 +133,6 @@ export const packsDataObject = {
             ]
         },
         [listOfPackNames.ARTIFACTS_LAEVATEINN]: {
-            "name": "laevateinn",
             "deals": [
                 {
                     category: Category.TWICEAWEEK,
@@ -133,6 +155,7 @@ export const packsDataObject = {
                         { level: 5, price: 19.99, pieces: 7 },
                         { level: 6, price: 49.99, pieces: 14 },
                     ],
+                    events: [Events.MICHAEL_ARCHANGEL, Events.MARBLES],
                 },
                 {
                     category: Category.DAILY,
@@ -164,6 +187,64 @@ export const packsDataObject = {
                     events: [Events.MICHAEL_ARCHANGEL, Events.MARBLES],
                 }
     
+            ],
+        },
+    },
+    [listOfPackCategories.RESOURCES]: {
+        [listOfPackNames.RESOURCE_AZURITE]: {
+            "deals": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 190 },
+                        { level: 2, price: 9.99, pieces: 340 },
+                        { level: 3, price: 19.99, pieces: 592 },
+                        { level: 4, price: 29.99, pieces: 768 },
+                        { level: 5, price: 49.99, pieces: 1024 },
+                        { level: 6, price: 99.99, pieces: 1650 },
+                        { level: 7, price: 99.99, pieces: 1650 },
+                    ],
+                    events: [],
+                },
+                {
+                    category: Category.WEEKLY,
+                    levels: [
+                        { level: 1, price: 2.99, pieces: 190 },
+                        { level: 2, price: 4.99, pieces: 300 },
+                        { level: 3, price: 9.99, pieces: 550 },
+                        { level: 4, price: 14.99, pieces: 700 },
+                        { level: 5, price: 29.99, pieces: 1250 },
+                    ],
+                },
+                {
+                    category: Category.DAILY,
+                    days: [Days.MONDAY, Days.WEDNESDAY, Days.FRIDAY],
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 200 },
+                        { level: 2, price: 6.99, pieces: 340 },
+                        { level: 3, price: 14.99, pieces: 650 },
+                        { level: 4, price: 29.99, pieces: 1150 },
+                        { level: 5, price: 49.99, pieces: 1600 },
+                    ],
+                    events: [],
+                },
+                {
+                    category: Category.LUCKY,
+                    estFrequency: "Monthly",
+                    levels: [
+                        { level: 1, price: 2.99, pieces: 240 },
+                        { level: 2, price: 6.99, pieces: 480 },
+                        { level: 3, price: 19.99, pieces: 1200 },
+                        { level: 4, price: 29.99, pieces: 1500 },
+                        { level: 5, price: 49.99, pieces: 1950 },
+                        { level: 6, price: 99.99, pieces: 2900 },
+                        { level: 7, price: 99.99, pieces: 2900 },
+                    ],
+                },
+                {
+                    category: Category.EVENTS,
+                    events: [],
+                }
             ],
         }
     }
