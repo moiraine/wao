@@ -4,7 +4,7 @@
   import type { Ref } from 'vue'
   import { packsData, listOfPackNames, packsDataObject, Category, Days, Events } from './packs'
 
-  const pricePerPiece: number = 0;
+  let pricePerPiece: number = 0;
   const selectedArtifacts: Ref<{category: string; itemName: string;}[]> = ref([]);
   const selectedDealLevels: Ref<{
     level: number; 
