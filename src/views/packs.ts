@@ -226,7 +226,15 @@ export const packsDataObject: PacksDataObject = {
                         { level: 4, price: 29.99, pieces: 1150 },
                         { level: 5, price: 49.99, pieces: 1600 },
                     ],
-                    events: [],
+                },
+                {
+                    category: Category.MONTHLY,
+                    levels: [
+                        { level: 1, price: 6.99, pieces: 500 },
+                        { level: 2, price: 14.99, pieces: 900 },
+                        { level: 3, price: 39.99, pieces: 1900 },
+                        { level: 4, price: 59.99, pieces: 2300 },
+                    ],
                 },
                 {
                     category: Category.LUCKY,
