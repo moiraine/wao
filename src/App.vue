@@ -36,6 +36,9 @@
             <RouterLink class="dropdown-item" to="/data/titan">Titan</RouterLink>
           </li>
           <li>
+            <RouterLink class="dropdown-item" to="/data/fightingstats">Fighting Stats</RouterLink>
+          </li>
+          <li>
             <RouterLink class="dropdown-item" to="/data/jewels">Jewels</RouterLink>
           </li>
         </ul>

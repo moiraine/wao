@@ -10,6 +10,7 @@ export enum Days {
 
 export enum Category {
     DAILY = "Daily",
+    CUSTOM = "Custom",
     WEEKLY = "Weekly",
     MONTHLY = "Monthly",
     LUCKY = "Lucky",
@@ -89,13 +90,14 @@ export const listOfPackNames = {
 
 export const listOfPackCategories = {
     ARTIFACTS: 'Artifacts',
+    BEAST: 'Beast',
     RESOURCES: 'Resources',
 }
 
 export interface PacksDataObject {
     [key: string]: {
         [key: string]: {
-            deals: Deals[];
+            dealSets: Deals[];
         }
     }
 }
@@ -117,7 +119,7 @@ export interface Deals {
 export const packsDataObject: PacksDataObject = {
     [listOfPackCategories.ARTIFACTS]: {
         [listOfPackNames.ARTIFACTS_ATHENA]: {
-            "deals": [
+            "dealSets": [
                 {
                     category: Category.DAILY,
                     days: [Days.TUESDAY],
@@ -133,7 +135,7 @@ export const packsDataObject: PacksDataObject = {
             ]
         },
         [listOfPackNames.ARTIFACTS_LAEVATEINN]: {
-            "deals": [
+            "dealSets": [
                 {
                     category: Category.TWICEAWEEK,
                     levels: [
@@ -190,9 +192,82 @@ export const packsDataObject: PacksDataObject = {
             ],
         },
     },
+    [listOfPackCategories.BEAST]: {
+        [listOfPackNames.BEAST_ELEMENTS]: {
+            "dealSets": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 80 },
+                        { level: 2, price: 9.99, pieces: 145 },
+                        { level: 3, price: 19.99, pieces: 255 },
+                        { level: 4, price: 49.99, pieces: 360 },
+                        { level: 5, price: 99.99, pieces: 580 },
+                    ],
+                },
+                {
+                    category: Category.CUSTOM,
+                    levels: [
+                        { level: 1, price: 1.99, pieces: 42 },
+                        { level: 2, price: 3.99, pieces: 75 },
+                        { level: 3, price: 6.99, pieces: 125 },
+                        { level: 4, price: 14.99, pieces: 240 },
+                        { level: 5, price: 29.99, pieces: 410 },
+                    ],
+                    days: [Days.MONDAY],
+                },
+                {
+                    category: Category.WEEKLY,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 110 },
+                        { level: 2, price: 9.99, pieces: 190 },
+                        { level: 3, price: 19.99, pieces: 330 },
+                        { level: 4, price: 29.99, pieces: 430 },
+                    ],
+                },
+                {
+                    category: Category.DAILY,
+                    days: [Days.MONDAY, Days.THURSDAY],
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 100 },
+                        { level: 2, price: 9.99, pieces: 180 },
+                        { level: 3, price: 19.99, pieces: 320 },
+                        { level: 4, price: 29.99, pieces: 400 },
+                        { level: 5, price: 49.99, pieces: 560 },
+                    ],
+                },
+                {
+                    category: Category.MONTHLY,
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 100 },
+                        { level: 2, price: 6.99, pieces: 155 },
+                        { level: 3, price: 9.99, pieces: 195 },
+                        { level: 4, price: 19.99, pieces: 335 },
+                    ],
+                },
+                {
+                    category: Category.LUCKY,
+                    estFrequency: "Monthly",
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 120 },
+                        { level: 2, price: 6.99, pieces: 180 },
+                        { level: 3, price: 14.99, pieces: 300 },
+                        { level: 4, price: 29.99, pieces: 490 },
+                        { level: 5, price: 49.99, pieces: 680 },
+                        { level: 6, price: 99.99, pieces: 1200 },
+                        { level: 7, price: 99.99, pieces: 1200 },
+                    ],
+                },
+                {
+                    category: Category.EVENTS,
+                    events: [],
+                }
+            ],
+        }
+    },
     [listOfPackCategories.RESOURCES]: {
         [listOfPackNames.RESOURCE_AZURITE]: {
-            "deals": [
+            "dealSets": [
                 {
                     category: Category.TWICEAWEEK,
                     levels: [
@@ -261,7 +336,7 @@ export const packsDataObject: PacksDataObject = {
 export const packsData = [
     {
         "name": "athena",
-        "deals": [
+        "dealSets": [
             {
                 category: Category.DAILY,
                 days: [Days.TUESDAY],
@@ -278,7 +353,7 @@ export const packsData = [
     },
     {
         "name": "laevateinn",
-        "deals": [
+        "dealSets": [
             {
                 category: Category.TWICEAWEEK,
                 levels: [
