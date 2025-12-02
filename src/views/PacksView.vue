@@ -4,8 +4,17 @@
   import type { Ref } from 'vue'
   import { packsData, listOfPackNames, packsDataObject, Category, Days, Events } from './packs'
 
+  interface DealLevel {
+    level: number; 
+    price: number; 
+    pieces: number;
+    itemName: string;
+    category: Category;
+    days: Days[];
+  };
+
   let pricePerPiece: number = 0;
-  const selectedArtifacts: Ref<{category: string; itemName: string;}[]> = ref([]);
+  const selectedArtifacts: Ref<{category: Category; itemName: string;}[]> = ref([]);
   const selectedDealLevels: Ref<{
     level: number; 
     price: number; 
@@ -21,6 +30,35 @@
       piecesPerMonth: number;
     }
   } = {};
+
+  const allArtifactsDeals: {[key: string]: DealLevel[]} = {};
+
+  watch(selectedArtifacts, (artifacts) => {
+    artifacts.forEach((artifact) => {
+      allArtifactsDeals[artifact.itemName] = [];
+      const artifactDealSets = packsDataObject[artifact.category][artifact.itemName].dealSets;
+
+      artifactDealSets.forEach((dealSet) => {
+        if (!dealSet.levels) {
+          return;
+        }
+
+        dealSet.levels.forEach((level) => {
+          const dealLevel: DealLevel = {
+            level: level.level,
+            price: level.price,
+            pieces: level.pieces,
+            itemName: artifact.itemName,
+            category: artifact.category,
+            days: dealSet.days || [],
+          };
+
+          allArtifactsDeals[artifact.itemName].push(dealLevel);
+        });
+      });
+
+    });
+  });
 
   watch(selectedDealLevels, (newValue) => {
     selectedDealResults = {};
@@ -126,7 +164,7 @@
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
           <div class="accordion-body">
-            <template v-for="deal in packsDataObject[item.category][item.itemName].deals">
+            <template v-for="deal in packsDataObject[item.category][item.itemName].dealSets">
               <div v-if="deal.category === Category.EVENTS">
                 Also available in Events: {{deal.events}}
               </div>
@@ -145,7 +183,7 @@
               </thead>
 
               <tbody>
-                <template v-for="deal in packsDataObject[item.category][item.itemName].deals">
+                <template v-for="deal in packsDataObject[item.category][item.itemName].dealSets">
                   <tr v-for="level in deal.levels">
                     <td>
                       <input 
@@ -169,6 +207,7 @@
                     </td>
                     <td>
                       <template v-if="deal.category === Category.DAILY">{{deal.days?.join(", ")}}</template>
+                      <template v-else-if="deal.category === Category.CUSTOM">{{deal.category}} ({{deal.days?.join(", ")}})</template>
                       <template v-else>{{deal.category}}</template>
                     </td>
                   </tr>
