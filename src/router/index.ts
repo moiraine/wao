@@ -38,6 +38,11 @@ const router = createRouter({
       component: () => import('../views/data/JewelsDataView.vue'),
     },
     {
+      path: '/data/rules',
+      name: 'allianceRulesData',
+      component: () => import('../views/data/AllianceRulesView.vue'),
+    },
+    {
       path: '/events/ponies',
       name: 'ponies',
       component: () => import('../views/events/PoniesView.vue'),
