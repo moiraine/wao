@@ -41,6 +41,9 @@
           <li>
             <RouterLink class="dropdown-item" to="/data/jewels">Jewels</RouterLink>
           </li>
+          <li>
+            <RouterLink class="dropdown-item" to="/data/rules">Alliance Rules</RouterLink>
+          </li>
         </ul>
       </li>
     </ul>
