@@ -29,11 +29,15 @@
 
     <ol class="rules-list">
         <li>
-            No showing troops over cap, anywhere. This includes everything on the map that an enemy can see. 
+            No showing troops, anywhere. This includes everything on the map that an enemy can see. 
             If you have too many to hide, you must shield
         </li>
         <li>
-            Never gather with real troops.
+            If you are hiding in another castle, you must keep track of cross-realm events.  For all 
+            cross-realm events, you must recall your troops and shield. 
+        </li>
+        <li>
+            Gathering is allowed with t2 only.
         </li>
         <li>
             No gathering more than 4 to an elite mine.
