@@ -7,7 +7,7 @@
 
     <div class="heading">General Rules</div>
 
-    <ol>
+    <ol class="rules-list">
         <li>
             Be civil at all times, even when talking about the enemy in alliance chat or privately. 
             This is a war game, but let’s keep it as a game and don’t be hateful.
@@ -27,7 +27,7 @@
 
     <div class="heading">War Rules</div>
 
-    <ol>
+    <ol class="rules-list">
         <li>
             No showing troops over cap, anywhere. This includes everything on the map that an enemy can see. 
             If you have too many to hide, you must shield
@@ -60,7 +60,7 @@
 
     <div class="heading">Void/Frenzy Rules</div>
 
-    <ol>
+    <ol class="rules-list">
         <li>
             Purge is 24 hours before the event. All points found will be zeroed.  For void, all resources become charity.
         </li>
@@ -78,7 +78,7 @@
 
     <div class="heading">Team Events</div>
 
-    <ol>
+    <ol class="rules-list">
         <li>
             Listen to the commander only.  Do not talk.  Do not share coordinates.  
             Do not follow other people unless instructed.
@@ -104,7 +104,7 @@
 
     <div class="heading">Fortress Wars</div>
 
-    <ol>
+    <ol class="rules-list">
         <li>
             Always keep a second march formation to use for fortress wars in order to keep the main army safe!
         </li>
@@ -124,6 +124,7 @@
     .heading {
         padding: 1rem;
         font-weight: bold;
+        font-size: 1.5rem;
     }
     .table {
         min-width: 32rem;
@@ -131,5 +132,9 @@
 
     .accordion {
         min-width: 36rem;
+    }
+
+    .rules-list {
+        font-size: 1.5rem;
     }
 </style>
