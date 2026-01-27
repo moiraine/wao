@@ -9,8 +9,7 @@
 
     <ol class="rules-list">
         <li>
-            Be civil at all times, even when talking about the enemy in alliance chat or privately. 
-            This is a war game, but let’s keep it as a game and don’t be hateful.
+            Be kind to each other. This is a war game, but let’s keep it as a game and don’t be hateful.
         </li>
         <li>
             No politics. These discussions have no place in an international alliance and will benefit nobody.
@@ -20,8 +19,17 @@
             expect to be replaced
         </li>
         <li>
+            All castles must be tagged with your name and alliance. If you are protecting friends, they should
+            use your name.  We must be able to verify the identity of any castle in case of disputes.
+        </li>
+        <li>
             Everyone should have access to rss. Either a farmer or personal farms. No freeloading. 
             The alliance can supply nearly infinite rss, but not if you aren’t contributing to the alliance 
+        </li>
+        <li>
+            Do not add "+" to mails as acknowledgement.  Everyone is required to be active and read all alliance mail.
+            Ignorance or failure to read mail is not an excuse.  If you see mail that tells you to add a "+" when
+            you are finished reading the rules, ignore the instruction entirely.
         </li>
     </ol>
 
@@ -37,7 +45,7 @@
             cross-realm events, you must recall your troops and shield. 
         </li>
         <li>
-            Gathering is allowed with t2 only.
+            Only troops t4 or less are allowed to be exposed at any time.
         </li>
         <li>
             No gathering more than 4 to an elite mine.
@@ -47,14 +55,14 @@
             No ruins, no swarms, no monsters, no lines.
         </li>
         <li>
-            During defense, no reinforcing before swords 
+            Do not reinforce before swords!
         </li>
         <li>
             If you are SOSing someone, and the target has been shared in chat, communicate! 
             Do not risk two players attacking at the same time 
         </li>
         <li>
-            Farms must be cleaned daily. Any farm holding more than 5m rss will become charity 
+            Farms must be cleaned regularly. Any farm holding more than 5m rss will become charity 
         </li>
         <li>
             Never leave a hole in the hive. Teleport only if you can fill the spot behind you. 
@@ -70,8 +78,8 @@
         </li>
         <li>
             If you let your shield drop during the event and give up points more than once, 
-            prepare to be expelled and zeroed. It’s not hard to throw 8 hours + 1 day shield. 
-            If that’s too hard, then throw a 3 day shield.
+            prepare to be expelled and zeroed. It’s not hard to use 8 hours + 1 day shield. 
+            If there is any doubt, then use a 3 day shield.
         </li>
         <li>
             Always use your royal challenge if the shield is down. Always shield before your army returns home. 
