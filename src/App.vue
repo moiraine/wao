@@ -33,6 +33,12 @@
         </a>
         <ul class="dropdown-menu">
           <li>
+            <RouterLink class="dropdown-item" to="/data/beast">Beast</RouterLink>
+          </li>
+          <li>
+            <RouterLink class="dropdown-item" to="/data/garden">Garden</RouterLink>
+          </li>
+          <li>
             <RouterLink class="dropdown-item" to="/data/titan">Titan</RouterLink>
           </li>
           <li>

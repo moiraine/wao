@@ -14,6 +14,7 @@
   };
 
   let pricePerPiece: number = 0;
+  let totalCostPerMonth: number = 0;
   const selectedArtifacts: Ref<{category: Category; itemName: string;}[]> = ref([]);
   const selectedDealLevels: Ref<{
     level: number; 
@@ -62,8 +63,8 @@
 
   watch(selectedDealLevels, (newValue) => {
     selectedDealResults = {};
+    totalCostPerMonth = 0;
     newValue.forEach((dealLevel) => {
-      console.log(dealLevel);
       if (!selectedDealResults[dealLevel.itemName]) {
         selectedDealResults[dealLevel.itemName] = {
           pricePerMonth: 0,
@@ -91,6 +92,7 @@
 
       selectedDealResults[dealLevel.itemName].pricePerMonth += dealLevel.price * timesPerMonth;
       selectedDealResults[dealLevel.itemName].piecesPerMonth += dealLevel.pieces * timesPerMonth;
+      totalCostPerMonth += dealLevel.price * timesPerMonth;
     });
   });
 
@@ -151,18 +153,19 @@
     <div>
       Selected Deals: {{selectedDealResults}}
       <div v-for="(selectedDealResult, itemName) in selectedDealResults">
-        {{itemName}}: {{selectedDealResult.pricePerMonth}} {{selectedDealResult.piecesPerMonth}}
+        {{itemName}}: ${{Math.round(selectedDealResult.pricePerMonth)}}, {{selectedDealResult.piecesPerMonth}} pieces
       </div>
+      Total cost per month: {{Math.round(totalCostPerMonth)}}
     </div>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item" v-for="item in selectedArtifacts">
         <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#panel-' + item.itemName" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
             {{item.itemName}}
           </button>
         </h2>
-        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+        <div :id="'panel-' + item.itemName" class="accordion-collapse collapse show">
           <div class="accordion-body">
             <template v-for="deal in packsDataObject[item.category][item.itemName].dealSets">
               <div v-if="deal.category === Category.EVENTS">
