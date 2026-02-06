@@ -23,6 +23,16 @@ const router = createRouter({
       component: () => import('../views/PacksView.vue'),
     },
     {
+      path: '/data/garden',
+      name: 'gardenData',
+      component: () => import('../views/data/GardenView.vue'),
+    },
+    {
+      path: '/data/beast',
+      name: 'beastData',
+      component: () => import('../views/data/BeastDataView.vue'),
+    },
+    {
       path: '/data/titan',
       name: 'titanData',
       component: () => import('../views/data/TitanDataView.vue'),

@@ -58,6 +58,9 @@ export const listOfPackNames = {
     ARTIFACTS_CUSTOM: 'Custom Force Artifact',
     BEAST_ELEMENTS: 'Beast Elements', 
     BEAST_COMBO: 'Beast Combo',
+    BEAST_SKILL_XP_SCROLLS: 'Beast Skill XP Scrolls',
+    COLOSSUS_TITAN_CRYSTALS: 'Titan Crystals',
+    COLOSSUS_ANCIENT_ARTIFACTS: 'Ancient Artifacts',
     CUSTOM_STRENGTH: 'Custom Strength',
     EQUIPMENT_JEWELS_MIX: 'Jewel Combo',
     EQUIPMENT_JEWELS_ESSENCE: 'Jewels Essence',
@@ -91,6 +94,8 @@ export const listOfPackNames = {
 export const listOfPackCategories = {
     ARTIFACTS: 'Artifacts',
     BEAST: 'Beast',
+    COLOSSUS: 'Colossus',
+    EQUIPMENT: 'Equipment',
     RESOURCES: 'Resources',
 }
 
@@ -265,7 +270,141 @@ export const packsDataObject: PacksDataObject = {
                     events: [],
                 }
             ],
+        },
+        [listOfPackNames.BEAST_SKILL_XP_SCROLLS]: {
+            "dealSets": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 25 },
+                        { level: 2, price: 9.99, pieces: 45 },
+                        { level: 3, price: 19.99, pieces: 75 },
+                        { level: 4, price: 29.99, pieces: 90 },
+                        { level: 5, price: 49.99, pieces: 130 },
+                        { level: 6, price: 99.99, pieces: 220 },
+                    ],
+                },
+                {
+                    category: Category.DAILY,
+                    days: [Days.FRIDAY],
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 35 },
+                        { level: 2, price: 5.99, pieces: 55 },
+                        { level: 3, price: 14.99, pieces: 90 },
+                        { level: 4, price: 19.99, pieces: 100 },
+                        { level: 5, price: 29.99, pieces: 130 },
+                        { level: 6, price: 39.99, pieces: 160 },
+                    ],
+                },
+                {
+                    category: Category.MONTHLY,
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 45 },
+                        { level: 2, price: 8.99, pieces: 85 },
+                        { level: 3, price: 19.99, pieces: 155 },
+                        { level: 4, price: 29.99, pieces: 180 },
+                        { level: 4, price: 49.99, pieces: 240 },
+                    ],
+                },
+            ],
         }
+    },
+
+    [listOfPackCategories.COLOSSUS]: {
+        [listOfPackNames.COLOSSUS_TITAN_CRYSTALS]: {
+            "dealSets": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 160 },
+                        { level: 2, price: 9.99, pieces: 290 },
+                        { level: 3, price: 19.99, pieces: 490 },
+                        { level: 4, price: 29.99, pieces: 610 },
+                        { level: 5, price: 49.99, pieces: 850 },
+                        { level: 6, price: 99.99, pieces: 1350 },
+                    ],
+                    events: [],
+                },
+                {
+                    category: Category.DAILY,
+                    days: [Days.TUESDAY],
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 240 },
+                        { level: 2, price: 9.99, pieces: 420 },
+                        { level: 3, price: 18.99, pieces: 740 },
+                        { level: 4, price: 29.99, pieces: 880 },
+                        { level: 5, price: 49.99, pieces: 1200 },
+                        { level: 6, price: 99.99, pieces: 2000 },
+                    ],
+                }
+            ]
+        },
+    },
+
+    [listOfPackCategories.EQUIPMENT]: {
+        [listOfPackNames.EQUIPMENT_OBSIDIAN]: {
+            "dealSets": [
+                {
+                    category: Category.TWICEAWEEK,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 25 },
+                        { level: 2, price: 9.99, pieces: 44 },
+                        { level: 3, price: 19.99, pieces: 70 },
+                        { level: 4, price: 29.99, pieces: 90 },
+                        { level: 5, price: 49.99, pieces: 130 },
+                        { level: 6, price: 99.99, pieces: 210 },
+                        { level: 7, price: 99.99, pieces: 210 },
+                    ],
+                },
+                {
+                    category: Category.WEEKLY,
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 35 },
+                        { level: 2, price: 6.99, pieces: 50 },
+                        { level: 3, price: 14.99, pieces: 80 },
+                        { level: 4, price: 29.99, pieces: 135 },
+                        { level: 4, price: 39.99, pieces: 170 },
+                    ],
+                },
+                {
+                    category: Category.DAILY,
+                    days: [Days.THURSDAY],
+                    levels: [
+                        { level: 1, price: 3.99, pieces: 30 },
+                        { level: 2, price: 9.99, pieces: 60 },
+                        { level: 3, price: 19.99, pieces: 105 },
+                        { level: 4, price: 29.99, pieces: 130 },
+                        { level: 5, price: 39.99, pieces: 150 },
+                        { level: 6, price: 49.99, pieces: 160 },
+                    ],
+                },
+                {
+                    category: Category.MONTHLY,
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 100 },
+                        { level: 2, price: 9.99, pieces: 180 },
+                        { level: 3, price: 14.99, pieces: 240 },
+                    ],
+                },
+                {
+                    category: Category.LUCKY,
+                    estFrequency: "Monthly",
+                    levels: [
+                        { level: 1, price: 4.99, pieces: 50 },
+                        { level: 2, price: 9.99, pieces: 80 },
+                        { level: 3, price: 19.99, pieces: 125 },
+                        { level: 4, price: 29.99, pieces: 155 },
+                        { level: 5, price: 49.99, pieces: 220 },
+                        { level: 6, price: 99.99, pieces: 380 },
+                        { level: 7, price: 99.99, pieces: 380 },
+                    ],
+                },
+                {
+                    category: Category.EVENTS,
+                    events: [],
+                }
+            ],
+        },
     },
     [listOfPackCategories.RESOURCES]: {
         [listOfPackNames.RESOURCE_AZURITE]: {
